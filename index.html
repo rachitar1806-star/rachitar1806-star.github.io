@@ -1,5 +1,5 @@
 
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,96 +29,281 @@
   --mono: 'JetBrains Mono', monospace;
 }
 
-/* === LIGHT MODE — Beige & Brown palette === */
+/* === LIGHT MODE — Off-white bg, Navy/Teal cards, Light text on cards === */
 [data-theme="light"] {
-  --bg: #F5ECD7;
-  --bg2: #EFE3CA;
-  --bg3: #E8D9BC;
-  --surface: #DFC9A8;
-  --surface2: #D4BA94;
-  --border: #C4A47C;
-  --border2: #B08D60;
-  --accent: #6B4C2A;
-  --accent2: #8B6340;
-  --accent3: #6B4C2A;
-  --accent4: #4a3018;
-  --accent5: #2e1c08;
-  --text: #1e1208;
-  --text2: #5a3e22;
-  --text3: #9a7a55;
-  --nav-bg: rgba(245,236,215,0.96);
+  --bg: #F0EDE8;
+  --bg2: #EAE6DF;
+  --bg3: #E3DDD5;
+  --surface: #0F1F4A;
+  --surface2: #1a3a5c;
+  --border: #2D6B5A;
+  --border2: #1a4a3a;
+  --accent: #0F1F4A;
+  --accent2: #2D6B5A;
+  --accent3: #2D6B5A;
+  --accent4: #1a4a3a;
+  --accent5: #0a2a20;
+  --text: #0F1F4A;
+  --text2: #2D3F5A;
+  --text3: #7A8A9A;
+  --nav-bg: rgba(240,237,232,0.96);
 }
 
 /* Light mode specific overrides */
 [data-theme="light"] .bg-grid {
   background-image:
-    linear-gradient(rgba(107,76,42,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107,76,42,0.1) 1px, transparent 1px);
+    linear-gradient(rgba(45,107,90,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45,107,90,0.08) 1px, transparent 1px);
 }
-[data-theme="light"] .bg-lines svg { opacity: 0.07; }
+[data-theme="light"] .bg-lines svg { opacity: 0.06; }
 [data-theme="light"] .bg-lines svg line,
 [data-theme="light"] .bg-lines svg circle,
-[data-theme="light"] .bg-lines svg polygon { stroke: #B08D60; }
+[data-theme="light"] .bg-lines svg polygon { stroke: #2D6B5A; }
 [data-theme="light"] .hero-glow {
   background:
-    radial-gradient(ellipse 60% 55% at 55% 38%, rgba(139,99,64,0.15) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 15% 80%, rgba(176,141,96,0.1) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 55% at 55% 38%, rgba(45,107,90,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, rgba(15,31,74,0.08) 0%, transparent 60%);
 }
-[data-theme="light"] .btn-primary { background: #8B6340; color: #fff; }
-[data-theme="light"] .btn-primary:hover { background: #6B4C2A; box-shadow: 0 8px 24px rgba(107,76,42,0.3); }
-[data-theme="light"] .btn-outline { border-color: #C4A47C; color: #5a3e22; }
-[data-theme="light"] .btn-outline:hover { border-color: #6B4C2A; color: #1e1208; }
-[data-theme="light"] .nav-cta { background: rgba(139,99,64,0.18) !important; color: #4a3018 !important; border: 1px solid rgba(139,99,64,0.35) !important; }
-[data-theme="light"] .nav-cta:hover { background: rgba(139,99,64,0.3) !important; }
+[data-theme="light"] nav { background: var(--nav-bg); }
+
+/* Cards — dark navy/teal with light text inside */
+[data-theme="light"] .exp-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-category,
+[data-theme="light"] .vol-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .rec-card,
+[data-theme="light"] .edu-card,
+[data-theme="light"] .endorse-box,
+[data-theme="light"] .endorse-item,
+[data-theme="light"] .contact-info-block,
+[data-theme="light"] .hero-card,
+[data-theme="light"] .hc-metric,
+[data-theme="light"] .modal-box,
+[data-theme="light"] .skill-detail-panel { background: #0F1F4A; border-color: #2D6B5A; color: #F0EDE8; }
+
+[data-theme="light"] .project-header,
+[data-theme="light"] .exp-details { background: #162848; border-color: #2D6B5A; }
+
+/* Light text inside dark cards */
+[data-theme="light"] .exp-org,
+[data-theme="light"] .exp-role,
+[data-theme="light"] .exp-bullets li,
+[data-theme="light"] .project-title,
+[data-theme="light"] .project-summary,
+[data-theme="light"] .project-highlights li,
+[data-theme="light"] .skill-cat-title,
+[data-theme="light"] .skill-pill,
+[data-theme="light"] .vol-title,
+[data-theme="light"] .vol-desc,
+[data-theme="light"] .cert-name,
+[data-theme="light"] .rec-text,
+[data-theme="light"] .rec-name,
+[data-theme="light"] .edu-info h3,
+[data-theme="light"] .edu-info p,
+[data-theme="light"] .hc-name,
+[data-theme="light"] .hc-sub,
+[data-theme="light"] .contact-info-title,
+[data-theme="light"] .contact-info-text,
+[data-theme="light"] .endorse-item-name,
+[data-theme="light"] .endorse-item-text,
+[data-theme="light"] .modal-title,
+[data-theme="light"] .modal-section p,
+[data-theme="light"] .modal-section li,
+[data-theme="light"] .sdp-items li { color: #EAE6DF; }
+
+[data-theme="light"] .exp-detail-section p,
+[data-theme="light"] .exp-detail-section li { color: #c8d4e0; }
+
+/* Inputs inside endorse box */
+[data-theme="light"] .endorse-input { background: #162848; border-color: #2D6B5A; color: #EAE6DF; }
+[data-theme="light"] .endorse-input::placeholder { color: #6a8aaa; }
+[data-theme="light"] .endorse-input:focus { border-color: #BFA98A; }
+
+/* Buttons */
+[data-theme="light"] .btn-primary { background: #2D6B5A; color: #fff; }
+[data-theme="light"] .btn-primary:hover { background: #1a4a3a; box-shadow: 0 8px 24px rgba(45,107,90,0.3); }
+[data-theme="light"] .btn-outline { border-color: #2D6B5A; color: #0F1F4A; }
+[data-theme="light"] .btn-outline:hover { border-color: #0F1F4A; color: #0F1F4A; background: rgba(15,31,74,0.08); }
+[data-theme="light"] .nav-cta { background: rgba(45,107,90,0.15) !important; color: #1a4a3a !important; border: 1px solid rgba(45,107,90,0.35) !important; }
+[data-theme="light"] .nav-cta:hover { background: rgba(45,107,90,0.28) !important; }
 [data-theme="light"] .nav-links a:hover,
-[data-theme="light"] .nav-links a.active { color: #4a3018; background: rgba(139,99,64,0.12); }
-[data-theme="light"] .hc-avatar { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
-[data-theme="light"] .rec-avatar { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
-[data-theme="light"] .edu-logo { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
-[data-theme="light"] .cert-dot { background: #8B6340; }
-[data-theme="light"] .cert-badge { background: rgba(139,99,64,0.12); border-color: rgba(139,99,64,0.28); color: #4a3018; }
-[data-theme="light"] .cert-badge:hover { background: rgba(139,99,64,0.22); }
-[data-theme="light"] .exp-year { background: rgba(139,99,64,0.1); border-color: rgba(139,99,64,0.25); color: #4a3018; }
+[data-theme="light"] .nav-links a.active { color: #1a4a3a; background: rgba(45,107,90,0.1); }
+
+/* Avatars & logos */
+[data-theme="light"] .hc-avatar { background: linear-gradient(135deg, #2D6B5A, #BFA98A); }
+[data-theme="light"] .rec-avatar { background: linear-gradient(135deg, #2D6B5A, #BFA98A); }
+[data-theme="light"] .edu-logo { background: linear-gradient(135deg, #2D6B5A, #0F1F4A); }
+
+/* Tags & badges */
+[data-theme="light"] .tag { background: #162848; border-color: #2D6B5A; color: #a0c0d8; }
+[data-theme="light"] .badge { background: rgba(45,107,90,0.15); border-color: rgba(45,107,90,0.3); color: #BFA98A; }
+[data-theme="light"] .cert-dot { background: #2D6B5A; }
+[data-theme="light"] .cert-badge { background: rgba(45,107,90,0.15); border-color: rgba(45,107,90,0.3); color: #BFA98A; }
+[data-theme="light"] .cert-badge:hover { background: rgba(45,107,90,0.25); }
+[data-theme="light"] .exp-year { background: rgba(45,107,90,0.15); border-color: rgba(45,107,90,0.3); color: #BFA98A; }
+[data-theme="light"] .skill-pill { background: #162848; border-color: #2D6B5A; color: #a0c0d8; }
 [data-theme="light"] .skill-pill:hover,
-[data-theme="light"] .skill-pill.active { border-color: #8B6340; color: #1e1208; background: rgba(139,99,64,0.1); }
-[data-theme="light"] .section-eyebrow { color: #6B4C2A; }
-[data-theme="light"] .section-eyebrow::before { background: #6B4C2A; }
-[data-theme="light"] .section-title em { color: #6B4C2A; }
-[data-theme="light"] .hero-eyebrow { color: #6B4C2A; }
-[data-theme="light"] .hero-eyebrow::before { background: #6B4C2A; }
-[data-theme="light"] .hero-name em { color: #6B4C2A; }
-[data-theme="light"] .stat-num { color: #6B4C2A; }
-[data-theme="light"] .hc-metric-val { color: #6B4C2A; }
-[data-theme="light"] .edu-score-val { color: #6B4C2A; }
-[data-theme="light"] .ach-year { color: #6B4C2A; }
-[data-theme="light"] .cert-year { color: #6B4C2A; }
-[data-theme="light"] .exp-role { color: #6B4C2A; }
-[data-theme="light"] .project-label { color: #6B4C2A; }
-[data-theme="light"] .view-more { color: #6B4C2A; }
-[data-theme="light"] .vol-role { color: #6B4C2A; }
-[data-theme="light"] .sdp-title { color: #6B4C2A; }
-[data-theme="light"] .modal-org { color: #6B4C2A; }
-[data-theme="light"] .endorse-item-rel { color: #6B4C2A; }
-[data-theme="light"] .project-card:hover { border-color: rgba(139,99,64,0.45); box-shadow: 0 16px 48px rgba(107,76,42,0.18); }
+[data-theme="light"] .skill-pill.active { border-color: #BFA98A; color: #FAF6DC; background: rgba(45,107,90,0.25); }
+
+/* Section eyebrows & accents */
+[data-theme="light"] .section-eyebrow { color: #2D6B5A; }
+[data-theme="light"] .section-eyebrow::before { background: #2D6B5A; }
+[data-theme="light"] .section-title em { color: #2D6B5A; }
+[data-theme="light"] .hero-eyebrow { color: #2D6B5A; }
+[data-theme="light"] .hero-eyebrow::before { background: #2D6B5A; }
+[data-theme="light"] .hero-name em { color: #2D6B5A; }
+[data-theme="light"] .stat-num { color: #2D6B5A; }
+[data-theme="light"] .hc-metric-val { color: #BFA98A; }
+[data-theme="light"] .edu-score-val { color: #BFA98A; }
+[data-theme="light"] .ach-year { color: #2D6B5A; }
+[data-theme="light"] .cert-year { color: #BFA98A; }
+[data-theme="light"] .exp-role { color: #BFA98A; }
+[data-theme="light"] .project-label { color: #BFA98A; }
+[data-theme="light"] .view-more { color: #BFA98A; }
+[data-theme="light"] .vol-role { color: #BFA98A; }
+[data-theme="light"] .sdp-title { color: #BFA98A; }
+[data-theme="light"] .modal-org { color: #BFA98A; }
+[data-theme="light"] .endorse-item-rel { color: #BFA98A; }
+[data-theme="light"] .rec-position { color: #a0b8cc; }
+[data-theme="light"] .cert-issuer { color: #a0b8cc; }
+
+/* Bullets & lines */
 [data-theme="light"] .exp-bullets li::before,
 [data-theme="light"] .exp-detail-section li::before,
 [data-theme="light"] .project-highlights li::before,
 [data-theme="light"] .modal-section li::before,
-[data-theme="light"] .sdp-items li::before { background: #8B6340; }
-[data-theme="light"] .endorse-btn { background: #8B6340; }
-[data-theme="light"] .endorse-btn:hover { background: #6B4C2A; }
-[data-theme="light"] .badge { background: rgba(139,99,64,0.1); border-color: rgba(139,99,64,0.22); color: #4a3018; }
-[data-theme="light"] ::-webkit-scrollbar-thumb { background: #8B6340; }
+[data-theme="light"] .sdp-items li::before { background: #BFA98A; }
+
+/* Buttons inside cards */
+[data-theme="light"] .exp-toggle { border-color: #2D6B5A; color: #a0b8cc; }
+[data-theme="light"] .exp-toggle:hover { background: rgba(45,107,90,0.15); color: #BFA98A; }
+[data-theme="light"] .endorse-btn { background: #2D6B5A; color: #fff; }
+[data-theme="light"] .endorse-btn:hover { background: #1a4a3a; }
+
+/* Misc */
+[data-theme="light"] ::-webkit-scrollbar-thumb { background: #2D6B5A; }
 [data-theme="light"] #experience,
 [data-theme="light"] #skills,
 [data-theme="light"] #certifications,
-[data-theme="light"] #education { background: rgba(239,227,202,0.7); }
-[data-theme="light"] .rec-card::before { background: linear-gradient(90deg, #8B6340, transparent); }
-[data-theme="light"] .project-header::before { background: #8B6340; }
-[data-theme="light"] .hero-card::before { background: linear-gradient(90deg, #8B6340, #C4A47C, transparent); }
-[data-theme="light"] .theme-toggle { background: #C4A47C; border-color: #B08D60; }
+[data-theme="light"] #education { background: rgba(234,230,223,0.6); }
+[data-theme="light"] .rec-card::before { background: linear-gradient(90deg, #2D6B5A, transparent); }
+[data-theme="light"] .project-card:hover { border-color: #BFA98A; box-shadow: 0 16px 48px rgba(15,31,74,0.2); }
+[data-theme="light"] .project-header::before { background: #2D6B5A; }
+[data-theme="light"] .hero-card::before { background: linear-gradient(90deg, #2D6B5A, #BFA98A, transparent); }
+[data-theme="light"] .modal-section h4 { color: #FAF6DC; border-color: #2D6B5A; }
+[data-theme="light"] .modal-close { background: #162848; border-color: #2D6B5A; color: #EAE6DF; }
+[data-theme="light"] .theme-toggle { background: #BFA98A; border-color: #A8906E; }
 [data-theme="light"] .theme-toggle::after { transform: translateX(16px); background: #fff; }
 
+/* === LIGHT MODE CARD GRAPHICS — taupe & warm tan === */
+
+/* Corner bracket accent on exp-card, vol-card, skill-category */
+[data-theme="light"] .exp-card,
+[data-theme="light"] .vol-card,
+[data-theme="light"] .skill-category,
+[data-theme="light"] .rec-card {
+  background-image:
+    linear-gradient(#A8906E 1px, transparent 1px),
+    linear-gradient(90deg, #A8906E 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Top-right corner bracket */
+[data-theme="light"] .exp-card::after,
+[data-theme="light"] .vol-card::after,
+[data-theme="light"] .skill-category::after,
+[data-theme="light"] .rec-card::after {
+  content: '';
+  position: absolute;
+  top: 10px; right: 10px;
+  width: 18px; height: 18px;
+  border-top: 1.5px solid #BFA98A;
+  border-right: 1.5px solid #BFA98A;
+  border-radius: 0 3px 0 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Bottom-left corner bracket */
+[data-theme="light"] .exp-card::before,
+[data-theme="light"] .vol-card::before,
+[data-theme="light"] .skill-category::before {
+  content: '';
+  position: absolute;
+  bottom: 10px; left: 10px;
+  width: 14px; height: 14px;
+  border-bottom: 1px solid #8B7355;
+  border-left: 1px solid #8B7355;
+  border-radius: 0 0 0 2px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Dot grid on project cards */
+[data-theme="light"] .project-card {
+  background-image: radial-gradient(circle, #A8906E 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: bottom right;
+  background-repeat: repeat;
+  background-attachment: local;
+}
+/* Fade the dot grid so it only shows in bottom-right corner */
+[data-theme="light"] .project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0F1F4A 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+[data-theme="light"] .project-card > * { position: relative; z-index: 1; }
+
+/* Diagonal line accent on edu-card */
+[data-theme="light"] .edu-card {
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 18px,
+    rgba(168,144,110,0.08) 18px,
+    rgba(168,144,110,0.08) 19px
+  );
+}
+
+/* Subtle dot on cert cards */
+[data-theme="light"] .cert-card {
+  background-image: radial-gradient(circle, rgba(168,144,110,0.15) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Hero card — top-right geometric accent */
+[data-theme="light"] .hero-card {
+  background-image:
+    radial-gradient(circle, rgba(168,144,110,0.2) 1px, transparent 1px);
+  background-size: 14px 14px;
+  background-position: bottom right;
+  background-repeat: repeat;
+}
+
+/* Thin horizontal rule lines on endorsement box */
+[data-theme="light"] .endorse-box {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 28px,
+    rgba(168,144,110,0.07) 28px,
+    rgba(168,144,110,0.07) 29px
+  );
+}
+[data-theme="light"] .edu-degree { color: #BFA98A; }
+[data-theme="light"] .hc-metric-name { color: #a0b8cc; }
+[data-theme="light"] footer { background: #0a1830; border-color: #2D6B5A; }
+[data-theme="light"] footer p { color: #a0b8cc; }
 /* === THEME TOGGLE BUTTON === */
 .theme-toggle {
   width: 36px; height: 20px;
