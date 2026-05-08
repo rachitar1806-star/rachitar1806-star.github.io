@@ -909,11 +909,9 @@ footer strong { color: var(--text2); font-family: var(--display); font-weight: 5
     <li><a href="#education">Education</a></li>
     <li><a href="#recommendations">Rec</a></li>
     <li><a href="#contact" class="nav-cta">Connect</a></li>
-    <li>
-  <div class="theme-toggle-wrap">
-    <span class="theme-toggle-label" id="theme-label">Dark</span>
-    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode"></button>
-  </div>
+   <li style="display:flex;align-items:center;margin-left:0.5rem;">
+  <span id="theme-label" style="font-family:monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-right:0.4rem;white-space:nowrap;">Dark</span>
+  <button onclick="toggleTheme()" style="width:36px;height:20px;background:var(--border2);border:1px solid var(--border2);border-radius:20px;cursor:pointer;position:relative;transition:background 0.3s;flex-shrink:0;" id="theme-toggle" aria-label="Toggle theme"><span id="toggle-knob" style="position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--text2);transition:all 0.3s;display:block;"></span></button>
 </li>
   </ul>
 </nav>
@@ -1799,6 +1797,34 @@ function toggleTheme() {
     if (label) label.textContent = saved === 'light' ? 'Light' : 'Dark';
   });
 })();>
+  // THEME TOGGLE
+function toggleTheme() {
+  const html = document.documentElement;
+  const isLight = html.getAttribute('data-theme') === 'light';
+  const newTheme = isLight ? 'dark' : 'light';
+  html.setAttribute('data-theme', newTheme);
+  const label = document.getElementById('theme-label');
+  const knob = document.getElementById('toggle-knob');
+  if (label) label.textContent = newTheme === 'light' ? 'Light' : 'Dark';
+  if (knob) {
+    knob.style.transform = newTheme === 'light' ? 'translateX(16px)' : 'translateX(0)';
+    knob.style.background = newTheme === 'light' ? '#fff' : 'var(--text2)';
+  }
+  localStorage.setItem('rr-theme', newTheme);
+}
+(function() {
+  const saved = localStorage.getItem('rr-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  window.addEventListener('DOMContentLoaded', function() {
+    const label = document.getElementById('theme-label');
+    const knob = document.getElementById('toggle-knob');
+    if (label) label.textContent = saved === 'light' ? 'Light' : 'Dark';
+    if (knob && saved === 'light') {
+      knob.style.transform = 'translateX(16px)';
+      knob.style.background = '#fff';
+    }
+  });
+})();
 // SCROLL REVEAL
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
