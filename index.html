@@ -23,9 +23,142 @@
   --text: #d0d8ee;
   --text2: #7a88a0;
   --text3: #3a4560;
+  --nav-bg: rgba(6,8,16,0.92);
   --display: 'Fraunces', serif;
   --body: 'Instrument Sans', sans-serif;
   --mono: 'JetBrains Mono', monospace;
+}
+
+/* === LIGHT MODE — Beige & Brown palette === */
+[data-theme="light"] {
+  --bg: #F5ECD7;
+  --bg2: #EFE3CA;
+  --bg3: #E8D9BC;
+  --surface: #DFC9A8;
+  --surface2: #D4BA94;
+  --border: #C4A47C;
+  --border2: #B08D60;
+  --accent: #6B4C2A;
+  --accent2: #8B6340;
+  --accent3: #6B4C2A;
+  --accent4: #4a3018;
+  --accent5: #2e1c08;
+  --text: #1e1208;
+  --text2: #5a3e22;
+  --text3: #9a7a55;
+  --nav-bg: rgba(245,236,215,0.96);
+}
+
+/* Light mode specific overrides */
+[data-theme="light"] .bg-grid {
+  background-image:
+    linear-gradient(rgba(107,76,42,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,76,42,0.1) 1px, transparent 1px);
+}
+[data-theme="light"] .bg-lines svg { opacity: 0.07; }
+[data-theme="light"] .bg-lines svg line,
+[data-theme="light"] .bg-lines svg circle,
+[data-theme="light"] .bg-lines svg polygon { stroke: #B08D60; }
+[data-theme="light"] .hero-glow {
+  background:
+    radial-gradient(ellipse 60% 55% at 55% 38%, rgba(139,99,64,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, rgba(176,141,96,0.1) 0%, transparent 60%);
+}
+[data-theme="light"] .btn-primary { background: #8B6340; color: #fff; }
+[data-theme="light"] .btn-primary:hover { background: #6B4C2A; box-shadow: 0 8px 24px rgba(107,76,42,0.3); }
+[data-theme="light"] .btn-outline { border-color: #C4A47C; color: #5a3e22; }
+[data-theme="light"] .btn-outline:hover { border-color: #6B4C2A; color: #1e1208; }
+[data-theme="light"] .nav-cta { background: rgba(139,99,64,0.18) !important; color: #4a3018 !important; border: 1px solid rgba(139,99,64,0.35) !important; }
+[data-theme="light"] .nav-cta:hover { background: rgba(139,99,64,0.3) !important; }
+[data-theme="light"] .nav-links a:hover,
+[data-theme="light"] .nav-links a.active { color: #4a3018; background: rgba(139,99,64,0.12); }
+[data-theme="light"] .hc-avatar { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
+[data-theme="light"] .rec-avatar { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
+[data-theme="light"] .edu-logo { background: linear-gradient(135deg, #8B6340, #6B4C2A); }
+[data-theme="light"] .cert-dot { background: #8B6340; }
+[data-theme="light"] .cert-badge { background: rgba(139,99,64,0.12); border-color: rgba(139,99,64,0.28); color: #4a3018; }
+[data-theme="light"] .cert-badge:hover { background: rgba(139,99,64,0.22); }
+[data-theme="light"] .exp-year { background: rgba(139,99,64,0.1); border-color: rgba(139,99,64,0.25); color: #4a3018; }
+[data-theme="light"] .skill-pill:hover,
+[data-theme="light"] .skill-pill.active { border-color: #8B6340; color: #1e1208; background: rgba(139,99,64,0.1); }
+[data-theme="light"] .section-eyebrow { color: #6B4C2A; }
+[data-theme="light"] .section-eyebrow::before { background: #6B4C2A; }
+[data-theme="light"] .section-title em { color: #6B4C2A; }
+[data-theme="light"] .hero-eyebrow { color: #6B4C2A; }
+[data-theme="light"] .hero-eyebrow::before { background: #6B4C2A; }
+[data-theme="light"] .hero-name em { color: #6B4C2A; }
+[data-theme="light"] .stat-num { color: #6B4C2A; }
+[data-theme="light"] .hc-metric-val { color: #6B4C2A; }
+[data-theme="light"] .edu-score-val { color: #6B4C2A; }
+[data-theme="light"] .ach-year { color: #6B4C2A; }
+[data-theme="light"] .cert-year { color: #6B4C2A; }
+[data-theme="light"] .exp-role { color: #6B4C2A; }
+[data-theme="light"] .project-label { color: #6B4C2A; }
+[data-theme="light"] .view-more { color: #6B4C2A; }
+[data-theme="light"] .vol-role { color: #6B4C2A; }
+[data-theme="light"] .sdp-title { color: #6B4C2A; }
+[data-theme="light"] .modal-org { color: #6B4C2A; }
+[data-theme="light"] .endorse-item-rel { color: #6B4C2A; }
+[data-theme="light"] .project-card:hover { border-color: rgba(139,99,64,0.45); box-shadow: 0 16px 48px rgba(107,76,42,0.18); }
+[data-theme="light"] .exp-bullets li::before,
+[data-theme="light"] .exp-detail-section li::before,
+[data-theme="light"] .project-highlights li::before,
+[data-theme="light"] .modal-section li::before,
+[data-theme="light"] .sdp-items li::before { background: #8B6340; }
+[data-theme="light"] .endorse-btn { background: #8B6340; }
+[data-theme="light"] .endorse-btn:hover { background: #6B4C2A; }
+[data-theme="light"] .badge { background: rgba(139,99,64,0.1); border-color: rgba(139,99,64,0.22); color: #4a3018; }
+[data-theme="light"] ::-webkit-scrollbar-thumb { background: #8B6340; }
+[data-theme="light"] #experience,
+[data-theme="light"] #skills,
+[data-theme="light"] #certifications,
+[data-theme="light"] #education { background: rgba(239,227,202,0.7); }
+[data-theme="light"] .rec-card::before { background: linear-gradient(90deg, #8B6340, transparent); }
+[data-theme="light"] .project-header::before { background: #8B6340; }
+[data-theme="light"] .hero-card::before { background: linear-gradient(90deg, #8B6340, #C4A47C, transparent); }
+[data-theme="light"] .theme-toggle { background: #C4A47C; border-color: #B08D60; }
+[data-theme="light"] .theme-toggle::after { transform: translateX(16px); background: #fff; }
+
+/* === THEME TOGGLE BUTTON === */
+.theme-toggle {
+  width: 36px; height: 20px;
+  background: var(--border2);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--text2);
+  transition: all 0.3s;
+}
+[data-theme="light"] .theme-toggle {
+  background: #C7A07F;
+  border-color: #A18160;
+}
+[data-theme="light"] .theme-toggle::after {
+  transform: translateX(16px);
+  background: #fff;
+}
+.theme-toggle-wrap {
+  display: flex; align-items: center; gap: 0.4rem;
+  margin-left: 0.8rem;
+}
+.theme-toggle-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  white-space: nowrap;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -62,7 +195,7 @@ body {
 /* === NAV === */
 nav {
   position: fixed; top:0; left:0; right:0; z-index:1000;
-  background: rgba(6,8,16,0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   height: 54px;
@@ -788,6 +921,12 @@ footer strong { color: var(--text2); font-family: var(--display); font-weight: 5
     <li><a href="#education">Education</a></li>
     <li><a href="#recommendations">Rec</a></li>
     <li><a href="#contact" class="nav-cta">Connect</a></li>
+    <li>
+      <div class="theme-toggle-wrap">
+        <span class="theme-toggle-label" id="theme-label">Dark</span>
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode"></button>
+      </div>
+    </li>
   </ul>
 </nav>
 
@@ -1657,6 +1796,24 @@ footer strong { color: var(--text2); font-family: var(--display); font-weight: 5
 </footer>
 
 <script>
+// THEME TOGGLE
+function toggleTheme() {
+  const html = document.documentElement;
+  const isLight = html.getAttribute('data-theme') === 'light';
+  html.setAttribute('data-theme', isLight ? 'dark' : 'light');
+  document.getElementById('theme-label').textContent = isLight ? 'Dark' : 'Light';
+  localStorage.setItem('rr-theme', isLight ? 'dark' : 'light');
+}
+// Restore saved theme on load
+(function() {
+  const saved = localStorage.getItem('rr-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.addEventListener('DOMContentLoaded', () => {
+    const label = document.getElementById('theme-label');
+    if (label) label.textContent = saved === 'light' ? 'Light' : 'Dark';
+  });
+})();
+
 // SCROLL REVEAL
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
@@ -1759,99 +1916,34 @@ function openCertModal(key) {
   openModal('cert');
 }
 
-// COMMUNITY ENDORSEMENTS — persistent via Google Sheets + Apps Script
-// ⚙️  SETUP: Paste your deployed Apps Script Web App URL below after following the instructions in SETUP_GUIDE.html
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-lNj0AMVDTf9VD5C9NccV3jLisZ44JhvQV18PVeVgVlt34ujrN0mvDWwu0TzZ-nwdZw/exec';
-
-async function loadEndorsements() {
-  const list = document.getElementById('endorse-list');
-  const empty = document.getElementById('endorse-empty');
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('PASTE_YOUR')) {
-    empty.textContent = '⚙️ Endorsements not yet connected. See setup guide.';
-    empty.style.display = 'block';
-    return;
-  }
-  empty.textContent = 'Loading endorsements…';
-  empty.style.display = 'block';
-  try {
-    const res = await fetch(APPS_SCRIPT_URL + '?action=get');
-    const data = await res.json();
-    renderEndorse(data.endorsements || []);
-  } catch(e) {
-    empty.textContent = 'Could not load endorsements.';
-    empty.style.display = 'block';
-  }
-}
-
-async function submitEndorse() {
+// COMMUNITY ENDORSEMENTS
+let endorsements = [];
+function submitEndorse() {
   const name = document.getElementById('e-name').value.trim();
   const relation = document.getElementById('e-relation').value.trim();
   const text = document.getElementById('e-text').value.trim();
-  if (!name || !text) { showEndorseMsg('Please enter your name and endorsement.', 'error'); return; }
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('PASTE_YOUR')) {
-    showEndorseMsg('⚙️ Endorsements backend not yet connected. See setup guide.', 'error'); return;
-  }
-  const btn = document.querySelector('.endorse-btn');
-  btn.textContent = 'Submitting…'; btn.disabled = true;
-  try {
-    const res = await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ action: 'add', name, relation, text })
-    });
-    const data = await res.json();
-    if (data.status === 'ok') {
-      document.getElementById('e-name').value = '';
-      document.getElementById('e-relation').value = '';
-      document.getElementById('e-text').value = '';
-      showEndorseMsg('Thank you! Your endorsement has been submitted.', 'ok');
-      loadEndorsements();
-    } else {
-      showEndorseMsg('Something went wrong. Please try again.', 'error');
-    }
-  } catch(e) {
-    showEndorseMsg('Could not connect. Please try again.', 'error');
-  }
-  btn.textContent = 'Submit Endorsement'; btn.disabled = false;
+  if (!name || !text) { alert('Please enter your name and endorsement.'); return; }
+  endorsements.push({ name, relation, text, date: new Date().toLocaleDateString('en-IN', {day:'numeric',month:'short',year:'numeric'}) });
+  document.getElementById('e-name').value = '';
+  document.getElementById('e-relation').value = '';
+  document.getElementById('e-text').value = '';
+  renderEndorse();
 }
-
-function showEndorseMsg(msg, type) {
-  let el = document.getElementById('endorse-msg');
-  if (!el) {
-    el = document.createElement('div');
-    el.id = 'endorse-msg';
-    el.style.cssText = 'font-family:var(--mono);font-size:0.7rem;padding:0.6rem 0.9rem;border-radius:5px;margin-top:0.6rem;';
-    document.querySelector('.endorse-btn').after(el);
-  }
-  el.textContent = msg;
-  el.style.background = type === 'ok' ? 'rgba(26,82,204,0.12)' : 'rgba(200,50,50,0.12)';
-  el.style.color = type === 'ok' ? 'var(--accent3)' : '#e06060';
-  el.style.border = type === 'ok' ? '1px solid rgba(64,128,240,0.25)' : '1px solid rgba(200,50,50,0.25)';
-  setTimeout(() => { el.textContent = ''; el.style.background = 'none'; el.style.border = 'none'; }, 5000);
-}
-
-function renderEndorse(endorsements) {
+function renderEndorse() {
   const list = document.getElementById('endorse-list');
   const empty = document.getElementById('endorse-empty');
-  if (!endorsements || endorsements.length === 0) {
-    empty.textContent = 'No endorsements yet. Be the first!';
-    empty.style.display = 'block';
-    list.innerHTML = '';
-    return;
-  }
+  if (endorsements.length === 0) { empty.style.display = 'block'; return; }
   empty.style.display = 'none';
-  list.innerHTML = endorsements.slice().reverse().map(e => `
+  list.innerHTML = endorsements.map(e => `
     <div class="endorse-item">
       <div class="endorse-item-head">
-        <span class="endorse-item-name">${e.name || ''}</span>
-        <span class="endorse-item-rel">${e.relation || 'Peer'}${e.date ? ' · ' + e.date : ''}</span>
+        <span class="endorse-item-name">${e.name}</span>
+        <span class="endorse-item-rel">${e.relation || 'Peer'} · ${e.date}</span>
       </div>
-      <div class="endorse-item-text">"${e.text || ''}"</div>
+      <div class="endorse-item-text">"${e.text}"</div>
     </div>
   `).join('');
 }
-
-window.addEventListener('load', loadEndorsements);
 
 // COUNTER ANIMATION
 function animateCount(el, target, suffix) {
@@ -1946,4 +2038,3 @@ window.addEventListener('load', loadExpImages);
 </div>
 </body>
 </html>
-
